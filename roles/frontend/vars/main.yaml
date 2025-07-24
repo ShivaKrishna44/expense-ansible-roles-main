@@ -1,0 +1,3 @@
+BACKEND_HOST: backend.shivakrishna.shop
+APP_LOCAION: /usr/share/nginx/html
+COMPONENT: frontend
