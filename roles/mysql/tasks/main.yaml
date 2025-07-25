@@ -1,26 +1,10 @@
-
-- name: Install Python pip
-  ansible.builtin.package:
-    name: python3-pip
-    state: present
-
-- name: Install required Python libraries
+- name: Install MySQL libraries
   ansible.builtin.pip:
     name: "{{ item }}"
-    executable: pip3
+    executable: pip3.9
   loop:
-    - cryptography
-    - PyMySQL
-    - boto3
-    - botocore
-
-#- name: Install MySQL libraries
-#  ansible.builtin.pip:
-#    name: "{{ item }}"
-#    executable: /usr/bin/python3
-#  loop:
-#  - cryptography
-#  - PyMySQL
+  - cryptography
+  - PyMySQL
 
 - name: Install MySQL server
   ansible.builtin.package:
